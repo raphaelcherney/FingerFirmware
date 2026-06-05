@@ -1,0 +1,35 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "nucleo-debug",
+      "displayName": "NUCLEO-G431KB Debug",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/nucleo-debug",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "nucleo-release",
+      "displayName": "NUCLEO-G431KB Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/nucleo-release",
+      "toolchainFile": "${sourceDir}/cmake/arm-none-eabi-gcc.cmake",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "nucleo-debug",
+      "configurePreset": "nucleo-debug"
+    },
+    {
+      "name": "nucleo-release",
+      "configurePreset": "nucleo-release"
+    }
+  ]
+}
