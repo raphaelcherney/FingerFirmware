@@ -67,11 +67,11 @@ cmake --build --preset nucleo-debug --target erase
 ## Project Layout
 
 ```text
-App/                Main firmware behavior
-Audio/              TDM/SAI audio capture module
-Comms/              CAN/FDCAN protocol and transport module
-Core/               Startup and main entry point
-Sensors/            I2C sensor module
+app/                Main firmware behavior
+audio/              TDM/SAI audio capture module
+comms/              CAN/FDCAN protocol and transport module
+core/               Startup and main entry point
+sensors/            I2C sensor module
 boards/             Board-specific linker script and board notes
 cmake/              Toolchain and helper CMake files
 docs/               Bring-up notes
@@ -82,6 +82,7 @@ tools/              Newcomer-friendly scripts
 
 - [x] Build and flash NUCLEO-G431KB.
 - [x] Blink LD2 on PB8.
+- [ ] Test setup.sh scripts on new machines
 - [ ] Add UART logging.
 - [ ] Add CubeMX `.ioc` for final STM32G431KBU6 pinout.
 - [ ] Bring up I2C sensor bus.
@@ -90,6 +91,6 @@ tools/              Newcomer-friendly scripts
 
 ## Notes For New Contributors
 
-Start in `Core/Src/main.c`, then read `App/app.c`.
+Start in `core/src/main.c`, then read `app/app.c`.
 
-Application code should live in `App/`, `Comms/`, `Sensors/`, and `Audio/`. Keep chip startup and board-specific setup small and isolated so future CubeMX-generated code can replace it cleanly.
+Application code should live in `app/`, `comms/`, `sensors/`, and `audio/`. Keep chip startup and board-specific setup small and isolated so future CubeMX-generated code can replace it cleanly.
