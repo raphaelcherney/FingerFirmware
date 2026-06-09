@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure nucleo-debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "nucleo-debug"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Build nucleo-debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "nucleo-debug"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "Configure nucleo-debug"
+      ],
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Flash nucleo-debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "nucleo-debug",
+        "--target",
+        "flash"
+      ],
+      "dependsOn": [
+        "Build nucleo-debug"
+      ],
+      "problemMatcher": "$gcc"
+    }
+  ]
+}
