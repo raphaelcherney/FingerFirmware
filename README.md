@@ -200,6 +200,6 @@ tools/              Newcomer-friendly scripts
 
 ## Notes For New Contributors
 
-Start in `core/src/main.c`, then read `app/app.c`.
+Start in `core/main.c`, then read `app/app.c`.
 
 Application code should live in `app/`, `comms/`, and `sensors/`. Keep chip startup and board-specific setup small and isolated so future CubeMX-generated code can replace it cleanly.

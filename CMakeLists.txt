@@ -10,11 +10,11 @@ set(TARGET_NAME finger_firmware)
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/boards/nucleo_g431kb/STM32G431KB_FLASH.ld)
 
 add_executable(${TARGET_NAME}
-    core/src/main.c
-    core/src/startup.c
-    core/src/system_stm32g431.c
-    core/src/system_time.c
-    core/src/uart_log.c
+    core/main.c
+    core/startup.c
+    core/system_stm32g431.c
+    core/system_time.c
+    core/uart_log.c
     app/app.c
     app/diagnostics.c
     comms/can.c
@@ -24,7 +24,7 @@ add_executable(${TARGET_NAME}
 )
 
 target_include_directories(${TARGET_NAME} PRIVATE
-    core/inc
+    core
     app
     comms
     sensors
