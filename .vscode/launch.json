@@ -13,6 +13,10 @@
       "serverpath": "${workspaceFolder}/tools/ST-LINK_gdbserver",
       "runToEntryPoint": "main",
       "preLaunchTask": "Build nucleo-debug",
+      "liveWatch": {
+        "enabled": true,
+        "samplesPerSecond": 4
+      },
       "showDevDebugOutput": "none"
     }
   ]
