@@ -190,12 +190,13 @@ tools/              Newcomer-friendly scripts
 
 - [x] Build and flash NUCLEO-G431KB.
 - [x] Blink LD2 on PB8.
-- [ ] Test setup.sh scripts on new machines
 - [x] Add UART logging.
-- [ ] Add CubeMX `.ioc` for final STM32G431KBU6 pinout.
-- [ ] Bring up I2C sensor bus.
+- [x] Bring up I2C sensor bus.
+- [ ] Test setup.sh scripts on new machines
+- [ ] Bring up SAI/TDM audio capture
+- [ ] Look into DMA for audio
+- [ ] Look into if we want a HAL or not (CubeMX `.ioc` for final STM32G431KBU6 pinout?)
 - [ ] Bring up FDCAN loopback and external CAN transceiver.
-- [ ] Bring up SAI/TDM audio capture with DMA.
 - [ ] Add CI with GitHub Actions.
 
 ## Notes For New Contributors
